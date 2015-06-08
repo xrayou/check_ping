@@ -178,6 +178,7 @@ def check_ping_result(quiet):
     result = quiet_ping(quiet)
     print quiet_ping(quiet)
     list_ = list(result)
+    
     if list_[0] > 1 or list_[2] > 15 :
         msgtxt ="主机 " + quiet + "\r丢包 " + str(list_[0]) + "% " + " 最大延迟 " + str(list_[2]) + " 平均延迟 " + str(list_[1]) + " 请检查网络"
         send_mail(msgtxt)
